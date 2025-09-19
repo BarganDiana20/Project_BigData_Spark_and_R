@@ -22,14 +22,14 @@ To achieve this objective, I implemented and compared several regression models,
 
 📂 **Project steps:**  
 1. **Data Loading and Exploration**
-- Loading data into Spark using sparklyr.  
-- Exploring data with familiar R functions for visualization and descriptive statistics: ggplot2, tidyverse, dplyr.  
-2. **Data Cleaning and Preprocessing data**  using sparklyr functions alongside tidyverse tools.
+  - Loading data into Spark using sparklyr.  
+  - Exploring data with familiar R functions for visualization and descriptive statistics: ggplot2, tidyverse, dplyr.  
+2. **Data Cleaning and Preprocessing data**  using sparklyr functions alongside tidyverse tools.  
 3. **Building and training regression models:**  
-- Linear Regression → ml_linear_regression()  
-- Random Forest → ml_random_forest_regressor()  
-- Gradient Boosted Trees → ml_gradient_boosted_trees()  
-- Decision Tree Regression → ml_decision_tree_regressor()  
+   - Linear Regression → ml_linear_regression()  
+   - Random Forest → ml_random_forest_regressor()  
+   - Gradient Boosted Trees → ml_gradient_boosted_trees()  
+   - Decision Tree Regression → ml_decision_tree_regressor()  
 
 
 ## About Sparklyr:  
