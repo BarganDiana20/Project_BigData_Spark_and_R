@@ -23,19 +23,24 @@ To achieve this objective, I implemented and compared several regression models,
 📂 **Project steps:**  
 1. **Data Loading and Exploration**
   - Loading data into Spark using sparklyr.  
-  - Exploring data with familiar R functions for visualization and descriptive statistics: ggplot2, tidyverse, dplyr.  
-2. **Data Cleaning and Preprocessing data**  using sparklyr functions alongside tidyverse tools.  
+  - Exploring data with familiar R functions for visualization and descriptive statistics: ggplot2, tidyverse, dplyr.
+2. **Data Cleaning and Preprocessing data**  using sparklyr functions alongside tidyverse tools.
 3. **Building and training regression models:**  
    - Linear Regression → ml_linear_regression()  
    - Random Forest → ml_random_forest_regressor()  
    - Gradient Boosted Trees → ml_gradient_boosted_trees()  
    - Decision Tree Regression → ml_decision_tree_regressor()
-4. **Model Evaluation**
- - ***Metrics used***: **Root Mean Squared Error (RMSE) and R-squared (R²)**.  
- - ***Visualization of model performance through graphs**:
-   + comparison of performance metrics
-   + importance of variables for each model
-
+4. **Model Evaluation:**  
+ - Metrics used: **Root Mean Squared Error (RMSE) and R-squared (R²)**.  
+ - Visualization of model performance through graphs:
+   + comparison of performance metrics;
+   + importance of variables for each model.
+5. **Cross-Validation & Hyperparameter Tuning:**
+ Creating a custom ml_regression_cv() function that:  
+   + receives as input a Spark DataFrame, the dependent variable and predictors;
+   + runs cross-validation on multiple folds;
+   + applies a hyperparameter grid for tuning;
+   + returns the best parameters and performance scores.
 
 ## About Sparklyr:  
 Sparklyr is an  opern-source R Package that provides a interface between R and Apache Spark. It enables R users to interact with Spark using familiar syntax R and data structures. Sparklyr allows seamless integration of Spark's distributed computing capabilities with R's rich ecosystem of packages for data analysis, visualization, and statistical modeling.  
