@@ -46,8 +46,6 @@ spark_merge_df <- sdf_copy_to(sc, r_merge_df, "spark_merge_df",overwrite = TRUE)
 #Comanda pentru deconectare de pe Spark:
 spark_disconnect(sc)   
 
-
-
 #---------------------------------------------------------------------
     #### Pasi realizati doar la inceput pentru preprocesarea seturilor de date in mediul Spark. 
     ##   Acesti pasi nu au mai fost repetati ulterior deoarece seturile de date curatate
@@ -969,6 +967,7 @@ ggplot(importance_dt, aes(x = reorder(feature, importance), y = importance, fill
   labs(x = "Variabile", y = "Importanta", fill = "Model") +
   ggtitle("Importanta variabilelor pentru Decision Tree cu validare incrucisata") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
 
 
 
