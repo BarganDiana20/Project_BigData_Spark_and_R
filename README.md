@@ -1,6 +1,6 @@
 # Project_BigData_Spark_and_R
 
-📌 General description :
+📌# General description :
 In this project, I set out to explore and analyze the ["Walmart Recruiting - Store Sales Forecasting"](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting/data) dataset available on the Kaggle website, using the R programming language and Spark (run locally).  
 
 📂 The walmart dataset contains detailed information about Walmart stores, their weekly sales, and associated features.   
