@@ -14,13 +14,22 @@ Short description of each dataset:
 The main objective was to identify and evaluate the factors that have a significant influence on weekly sales within each Walmart store.  
 I set out to build a predictive model that would help estimate these sales, based on the variables identified as relevant.
 
-🗂️ **Project structure and plan**:
-To achieve this objective, I implemented and compared several regression models, using Spark (via the sparklyr package) for data processing, model training, and evaluation, and R for data exploration, visualization, and interpretation of the results.  
-I analyzed and compared the performance of the models in two scenarios:
-+ without cross-validation
-+ with cross-validation
+🗂️ **Project structure and plan**:  
+To achieve this objective, I implemented and compared several regression models, using **Spark (via the sparklyr package)** for data processing, model training, and evaluation, and **R** for data exploration, visualization, and interpretation of the results.  
+ I analyzed and compared the performance of the models in two scenarios:
+* without cross-validation
+* with cross-validation
 
-
+📂 **Project steps:**  
+1. **Data Loading and Exploration**
+- Loading data into Spark using sparklyr.  
+- Exploring data with familiar R functions for visualization and descriptive statistics: ggplot2, tidyverse, dplyr.  
+2. **Data Cleaning and Preprocessing data**  using sparklyr functions alongside tidyverse tools.
+3. **Building and training regression models:**  
+- Linear Regression → ml_linear_regression()  
+- Random Forest → ml_random_forest_regressor()  
+- Gradient Boosted Trees → ml_gradient_boosted_trees()  
+- Decision Tree Regression → ml_decision_tree_regressor()  
 
 
 ## About Sparklyr:  
