@@ -35,12 +35,21 @@ To achieve this objective, I implemented and compared several regression models,
  - Visualization of model performance through graphs:
    + comparison of performance metrics;
    + importance of variables for each model.
-5. **Cross-Validation & Hyperparameter Tuning:**
- Creating a custom ml_regression_cv() function that:  
+5. **Cross-Validation & Hyperparameter Tuning:**  
+ 🔄 Creating a custom cross validation function **ml_regression_cv()** that:  
    + receives as input a Spark DataFrame, the dependent variable and predictors;
    + runs cross-validation on multiple folds;
    + applies a hyperparameter grid for tuning;
-   + returns the best parameters and performance scores.
+   + returns the best parameters and performance scores.  
+
+ I implemented this function to automate cross-validation and hyperparameter tuning for regression models in Spark.  
+ ***The main steps of the function are:***   
++ **Data partitioning** – the input Spark DataFrame is split into k folds using sdf_random_split(), ensuring a balanced distribution of data for cross-validation.  
++ **Generating training and testing sets** – for each fold, one partition is used as the test set, while the remaining folds are combined to form the training set.  
++ **Hyperparameter tuning and evaluation** – if a hyperparameter grid is provided, the function iterates over all combinations in the grid, training models on the training sets and evaluating them on the test sets using RMSE and R-squared. The best-performing model (the one with the lowest RMSE) is selected for each training set. If no hyperparameter grid is provided, the function trains a simple model using the specified model function.
++ **Output** – the function returns a list containing: the trained models, predictions made and performance evaluation for each fold.  
+
+ 6. **Analysis of differences between models with and without cross-validation.**
 
 ## About Sparklyr:  
 Sparklyr is an  opern-source R Package that provides a interface between R and Apache Spark. It enables R users to interact with Spark using familiar syntax R and data structures. Sparklyr allows seamless integration of Spark's distributed computing capabilities with R's rich ecosystem of packages for data analysis, visualization, and statistical modeling.  
