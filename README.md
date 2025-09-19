@@ -8,7 +8,7 @@ Sparklyr installation and setup:
 •	Install Java/MS packages. It can be downloaded by accessing this link. https://www.azul.com/downloads/?package=jdk#zulu  
 •	Install Spark  
 •	Setting up a Spark connection:  
-  - Connecting to a local Spark. This typically involves specifying the Spark master URL and configuring any necessary environment variables.  
-or - Connecting to a remote Spark cluster. 
+  * Connecting to a local Spark. This typically involves specifying the Spark master URL and configuring any necessary environment variables.  
+  * Or connecting to a remote Spark cluster. 
 
 
