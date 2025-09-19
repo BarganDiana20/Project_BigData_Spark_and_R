@@ -48,7 +48,8 @@ To achieve this objective, I implemented and compared several regression models,
 + **Generating training and testing sets** – for each fold, one partition is used as the test set, while the remaining folds are combined to form the training set.  
 + **Hyperparameter tuning and evaluation** – if a hyperparameter grid is provided, the function iterates over all combinations in the grid, training models on the training sets and evaluating them on the test sets using RMSE and R-squared. The best-performing model (the one with the lowest RMSE) is selected for each training set. If no hyperparameter grid is provided, the function trains a simple model using the specified model function.
 + **Output** – the function returns a list containing: the trained models, predictions made and performance evaluation for each fold.  
- This function provides a more robust way of assessing a model’s performance and helps identify the best set of hyperparameters for each model type.  
+
+This function provides a more robust way of assessing a model’s performance and helps identify the best set of hyperparameters for each model type.  
  6. **Analysis of differences between models with and without cross-validation.**
 
 ## About Sparklyr:  
