@@ -29,7 +29,12 @@ To achieve this objective, I implemented and compared several regression models,
    - Linear Regression → ml_linear_regression()  
    - Random Forest → ml_random_forest_regressor()  
    - Gradient Boosted Trees → ml_gradient_boosted_trees()  
-   - Decision Tree Regression → ml_decision_tree_regressor()  
+   - Decision Tree Regression → ml_decision_tree_regressor()
+4. **Model Evaluation**
+ - ***Metrics used***: **Root Mean Squared Error (RMSE) and R-squared (R²)**.  
+ - ***Visualization of model performance through graphs**:
+   + comparison of performance metrics
+   + importance of variables for each model
 
 
 ## About Sparklyr:  
