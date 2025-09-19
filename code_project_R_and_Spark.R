@@ -11,14 +11,23 @@ library(tidyverse)
 library(DBI)
 library(purrr)
 library(tidyr)
+# Install sparklyr from CRAN
+install.packages("sparklyr")
+# Load the sparklyr library
 library(sparklyr)
 
-#cod pentru stergere obiect din spark:
-#dbRemoveTable(sc, "sales")
+#Install spark in R :
+ # display all available Spark versions
+spark_available_versions()
+# we install the version that we want:
+spark_install(version = "3.5.1")
+#we check which version is installed
+spark_installed_versions()
 
 #-------- Conectare la Spark --------------- 
 Sys.setenv(JAVA_HOME = 'C:/Users/Diana/Desktop/Spark_java/zulu22.30.13-ca-jdk22.0.1-win_x64')
 
+# Connect to a local Spark instance
 sc <- spark_connect(master = "local")
 
 ###  Pasi pentru incarcarea seturilor de date dintr-o sesiune deja salvata ### 
@@ -31,8 +40,13 @@ spark_features <- sdf_copy_to(sc, r_features, "spark_features",overwrite = TRUE)
 spark_stores <- sdf_copy_to(sc, r_stores, "spark_stores",overwrite = TRUE)
 spark_merge_df <- sdf_copy_to(sc, r_merge_df, "spark_merge_df",overwrite = TRUE)
 
+#cod pentru stergere obiect din spark:
+#dbRemoveTable(sc, "sales")
+
 #Comanda pentru deconectare de pe Spark:
 spark_disconnect(sc)   
+
+
 
 #---------------------------------------------------------------------
     #### Pasi realizati doar la inceput pentru preprocesarea seturilor de date in mediul Spark. 
@@ -955,6 +969,7 @@ ggplot(importance_dt, aes(x = reorder(feature, importance), y = importance, fill
   labs(x = "Variabile", y = "Importanta", fill = "Model") +
   ggtitle("Importanta variabilelor pentru Decision Tree cu validare incrucisata") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
 
 
 
